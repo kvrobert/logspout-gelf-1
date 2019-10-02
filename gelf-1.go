@@ -17,6 +17,7 @@ var hostname string
 func init() {
 	hostname, _ = os.Hostname()
 	router.AdapterFactories.Register(NewGelfAdapter, "gelf")
+        log.Println("Creating adapter for TCP.....")
 }
 
 // GelfAdapter is an adapter that streams UDP JSON to Graylog
